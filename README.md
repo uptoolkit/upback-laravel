@@ -5,17 +5,18 @@ vérifier et lancer certaines tâches.
 
 # Étapes d'installation
 
-1. Installer Laravel Breeze sur son projet : composer require laravel/breeze --dev
-   Voir : https://laravel.com/docs/9.x/starter-kits#laravel-breeze
-2. Pour react, lancer :
+## 1. Installer Laravel Breeze sur son projet : composer require laravel/breeze --dev
+
+Voir : [https://laravel.com/docs/9.x/starter-kits#laravel-breeze]()
 
 ```bash
+composer require laravel/breeze --dev
 php artisan breeze:install react 
 ```
 
-3. Editer les infos dans le .env, ajoutez vos infos + :
+### 3. Editer les infos dans le .env, ajoutez vos infos + ajouter cette ligne :
 
-MIX_DEBUG_URL="votre_url_de_debug exemple : http://loc.xxx.com/ux"
+MIX_DEBUG_URL="votre_url_de_debug exemple : http://loc.xxx.com"
 
 Petite astuce pour pouvoir ouvrir et debug plus rapidement votre page
 
@@ -29,7 +30,7 @@ mix.browserSync(process.env.MIX_DEBUG_URL || "loc.yourapp.com");
    php artisan migrate
 ```
 
-4. Installer les packages qu'on utilise souvent et qui sont marqués comme Core packages :
+## 4. Installer les packages qu'on utilise souvent et qui sont marqués comme Core packages :
 
 ```bash
 composer require blok/laravel-repository # Utilisé pour avoir un helper Crud : https://packagist.org/packages/blok/laravel-repository
@@ -50,11 +51,10 @@ antd
 Ensuite dans webpack.mix.js, ajouter :
 
 ````js
-.
-less('resources/css/plugins/antd.less', 'public/css/plugins', {
+.less('resources/css/plugins/antd.less', 'public/css/plugins', {
     lessOptions: {
         modifyVars: {
-            "primary-color": "#0BD37E",
+            "primary-color": "#001aff",
         },
         javascriptEnabled: true,
     }
@@ -72,11 +72,12 @@ module.exports = {
 }
 ````
 
-Pour que Mix puisse compiler du less => il faut lancer 2 fois yarn dev (une fois pour installer et une fois pour
-vraiment le lancer).
+/!\ Pour que Mix puisse compiler du less => il faut lancer 2 fois yarn dev : une fois pour installer et ajouter les dépendances et une fois pour
+vraiment le lancer et compiler).
 
-Une fois que Mix a bien compilié un fichier public/css/plugins/antd.css dans Public. Vous pouvez l'importer dans votre
-projet.
+Une fois que Mix a bien compilié un fichier public/css/plugins/antd.css dans public (on le met dans public au cas où on l'utilise autre part). 
+
+Vous pouvez l'importer dans votre projet.
 
 ````js
 import '../../public/css/plugins/antd.css';
