@@ -1,7 +1,9 @@
 ## Cherry Pulp Laravel Boilerplate
 
+
+
 Ce boilerplate vise à être utilisé sur tous nos projets. Si vous partez d'une install existante, vous devez au moins
-vérifier et lancer certaines tâches.
+vérifier et lancer certaines tâches listées ici :
 
 # Étapes d'installation
 

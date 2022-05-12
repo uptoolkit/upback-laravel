@@ -11,6 +11,8 @@ const mix = require('laravel-mix');
  |
  */
 
+mix.browserSync(process.env.MIX_DEBUG_URL || "loc.laravel-react.test");
+
 mix.js('resources/js/app.js', 'public/js')
     .react()
     .postCss('resources/css/app.css', 'public/css', [
@@ -18,11 +20,12 @@ mix.js('resources/js/app.js', 'public/js')
         require('tailwindcss'),
         require('autoprefixer'),
     ])
-    .less("resources/css/plugins/ant.less", "public/css/plugins", {
+    .less("resources/css/plugins/antd.less", "public/css/plugins", {
         lessOptions: {
             javascriptEnabled: true,
             modifyVars: {
                 "primary-color": "#001aff",
+
             },
         },
     })
