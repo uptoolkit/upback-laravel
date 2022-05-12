@@ -68,6 +68,8 @@ export default function Welcome(props) {
      * /!\ pour écouter un changement au Mounted ou Unmounted, il faut mettre un [] en 2ème params
      */
     useEffect(() => {
+
+        console.log("Mounted");
         fetchData();
 
         return () => {
@@ -79,13 +81,10 @@ export default function Welcome(props) {
      * Pour écouter uniquement une certaine variable => le mettre dans un tableau en 2ème variable
      */
     useEffect(() => {
-        console.log('First time');
         if (data) {
             console.log('Data updated');
         }
     }, [data]);
-
-
 
     /**
      * Methode pour mettre à jour les données users (appelé au mounted et quand les données sont mis à jour)
