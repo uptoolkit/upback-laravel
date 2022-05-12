@@ -16,6 +16,7 @@ export default function Welcome(props) {
      */
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
+
     /**
      * Un état peut être une variable qui a été updaté ou un état d'interface
      */
@@ -68,6 +69,7 @@ export default function Welcome(props) {
      */
     useEffect(() => {
         fetchData();
+
         return () => {
             console.log("Unmounted");
         }
@@ -77,10 +79,13 @@ export default function Welcome(props) {
      * Pour écouter uniquement une certaine variable => le mettre dans un tableau en 2ème variable
      */
     useEffect(() => {
+        console.log('First time');
         if (data) {
             console.log('Data updated');
         }
-    }, [data])
+    }, [data]);
+
+
 
     /**
      * Methode pour mettre à jour les données users (appelé au mounted et quand les données sont mis à jour)

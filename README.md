@@ -36,7 +36,10 @@ mix.browserSync(process.env.MIX_DEBUG_URL || "loc.yourapp.com");
 composer require blok/laravel-repository # Utilisé pour avoir un helper Crud : https://packagist.org/packages/blok/laravel-repository
 composer require blok/laravel-javascript # Utilisé pour injecter du code js plus facilement et de manière correcte
 composer require blok/i18n # Utilisé pour exporter les fichiers langs dans son app.js
+composer require barryvdh/laravel-ide-helper # pour avoir un autocomplete dans son editeur favori :-)
 ```
+
+Pour une liste des composants utiles : [Aller voir ici](https://www.notion.so/cherrypulp/9e3f09ede2244f8ba975c85518c701a4?v=6935eee2bed74391aa56ec9ceec94618)
 
 # Optionnels
 
