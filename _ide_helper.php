@@ -16465,7 +16465,18 @@
      
 }
 
-        namespace Spatie\LaravelIgnition\Facades { 
+        namespace Nuwave\Lighthouse { 
+            /**
+     * The main entrypoint to GraphQL execution.
+     *
+     */ 
+        class GraphQL {
+         
+    }
+     
+}
+
+    namespace Spatie\LaravelIgnition\Facades { 
             /**
      * 
      *
@@ -16974,6 +16985,93 @@
         public static function inertiaPage()
         {
                         return \Illuminate\Testing\TestResponse::inertiaPage();
+        }
+                    /**
+         * 
+         *
+         * @see \Nuwave\Lighthouse\Testing\TestResponseMixin::assertGraphQLValidationError()
+         * @param string $key
+         * @param string|null $message
+         * @static 
+         */ 
+        public static function assertGraphQLValidationError($key, $message)
+        {
+                        return \Illuminate\Testing\TestResponse::assertGraphQLValidationError($key, $message);
+        }
+                    /**
+         * 
+         *
+         * @see \Nuwave\Lighthouse\Testing\TestResponseMixin::assertGraphQLValidationKeys()
+         * @param array $keys
+         * @static 
+         */ 
+        public static function assertGraphQLValidationKeys($keys)
+        {
+                        return \Illuminate\Testing\TestResponse::assertGraphQLValidationKeys($keys);
+        }
+                    /**
+         * 
+         *
+         * @see \Nuwave\Lighthouse\Testing\TestResponseMixin::assertGraphQLValidationPasses()
+         * @static 
+         */ 
+        public static function assertGraphQLValidationPasses()
+        {
+                        return \Illuminate\Testing\TestResponse::assertGraphQLValidationPasses();
+        }
+                    /**
+         * 
+         *
+         * @see \Nuwave\Lighthouse\Testing\TestResponseMixin::assertGraphQLError()
+         * @param \Throwable $error
+         * @static 
+         */ 
+        public static function assertGraphQLError($error)
+        {
+                        return \Illuminate\Testing\TestResponse::assertGraphQLError($error);
+        }
+                    /**
+         * 
+         *
+         * @see \Nuwave\Lighthouse\Testing\TestResponseMixin::assertGraphQLErrorMessage()
+         * @param string $message
+         * @static 
+         */ 
+        public static function assertGraphQLErrorMessage($message)
+        {
+                        return \Illuminate\Testing\TestResponse::assertGraphQLErrorMessage($message);
+        }
+                    /**
+         * 
+         *
+         * @see \Nuwave\Lighthouse\Testing\TestResponseMixin::assertGraphQLDebugMessage()
+         * @param string $message
+         * @static 
+         */ 
+        public static function assertGraphQLDebugMessage($message)
+        {
+                        return \Illuminate\Testing\TestResponse::assertGraphQLDebugMessage($message);
+        }
+                    /**
+         * 
+         *
+         * @see \Nuwave\Lighthouse\Testing\TestResponseMixin::assertGraphQLErrorFree()
+         * @static 
+         */ 
+        public static function assertGraphQLErrorFree()
+        {
+                        return \Illuminate\Testing\TestResponse::assertGraphQLErrorFree();
+        }
+                    /**
+         * 
+         *
+         * @see \Nuwave\Lighthouse\Testing\TestResponseMixin::assertGraphQLErrorCategory()
+         * @param string $category
+         * @static 
+         */ 
+        public static function assertGraphQLErrorCategory($category)
+        {
+                        return \Illuminate\Testing\TestResponse::assertGraphQLErrorCategory($category);
         }
          
     }
@@ -20700,6 +20798,7 @@ namespace  {
             class URL extends \Illuminate\Support\Facades\URL {}
             class Validator extends \Illuminate\Support\Facades\Validator {}
             class View extends \Illuminate\Support\Facades\View {}
+            class graphql extends \Nuwave\Lighthouse\GraphQL {}
             class Flare extends \Spatie\LaravelIgnition\Facades\Flare {}
      
 }

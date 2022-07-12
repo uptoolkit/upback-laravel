@@ -6,6 +6,7 @@ use Blok\Repository\AbstractEloquentRepository;
 use Blok\Repository\Http\Controllers\AbstractApiController;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 
 class UserController extends AbstractApiController
 {

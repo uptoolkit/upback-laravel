@@ -1,7 +1,7 @@
 {
     "name": "laravel/laravel",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "The Larasvel Framework.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
@@ -9,11 +9,14 @@
         "blok/i18n": "^1.2",
         "blok/laravel-javascript": "^1.1",
         "blok/laravel-repository": "^3.0",
+        "daniel-de-wit/lighthouse-sanctum": "^2.1",
         "guzzlehttp/guzzle": "^7.2",
         "inertiajs/inertia-laravel": "^0.5.4",
         "laravel/framework": "^9.11",
         "laravel/sanctum": "^2.8",
         "laravel/tinker": "^2.7",
+        "mll-lab/laravel-graphql-playground": "^2.6",
+        "nuwave/lighthouse": "^5.57",
         "tightenco/ziggy": "^1.0"
     },
     "require-dev": {
